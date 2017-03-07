@@ -24,14 +24,18 @@
 	<header id = "header" class = "alt">
 		<h1 id="header">P h a r m a S a f e</h1>
 		<h3>Helping you stay on track with your medications</h3>
+    
 		<div class="menu">
+    <center>
 		 	<ul>
 		 	<li><a class = "active" href="#start">Get Started!</a></li>
 		 	<li><a class = "active" href="#about">What is PharmaSafe?</a></li>
 		 	<li><a class = "active" href="#us">About the PharmaSafe Team</a></li>
   			<li><a class = "active" href="#contact">Contact</a></li>
 			</ul> 
+      </center>
 		</div>
+    
 	</header>
 		
 		<div id="box1">
@@ -88,13 +92,13 @@ side effects. These are normal when taking certain pharmaceutical products.</p>
 <p> Anushka enjoys chocolate popsicles and coding!</p>
 
 <h4> Alycia Lee</h4>
-<p> One thing Alycia can't live without is her dog</p>
+<p> One thing Alycia can't live without is her dog!</p>
 
 <h4> Annie Su</h4>
-<p> Annie's favorite accessory is her yellow shuttershades and she is very passionate about the font Helvetica</p>
+<p> Annie's favorite accessory is her yellow shuttershades and she is very passionate about the font Helvetica.</p>
 
 <h4>Natalie Wiegand</h4>
-<p> Natalie loves the beach and gluten free banana bread and oat bars and lil pop shop</p>
+<p> Natalie loves the beach and gluten free banana bread and oat bars and lil pop shop!</p>
 
 </div>
 
@@ -273,5 +277,35 @@ side effects. These are normal when taking certain pharmaceutical products.</p>
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
+
+
+
+
+<?php
+
+// Get the PHP helper library from twilio.com/docs/php/install
+require_once '/path/to/vendor/autoload.php'; // Loads the library
+use Twilio\Rest\Client;
+
+// Your Account Sid and Auth Token from twilio.com/user/account
+$sid = "AC789d4c412fd6578d774753707937db8b";
+$token = "b9b64a1dacafd3f1a8b8408ba5513e7f";
+$client = new Client($sid, $token);
+
+$client->messages->create(
+    "+13108803320",
+    array(
+        'from' => '+13108803320',
+        'body' => "Please take your pills!",
+    )
+); 
+?>
+
+
+
+
+
+
+
 
 </html>
